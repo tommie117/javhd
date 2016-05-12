@@ -5,7 +5,7 @@ $link = $_POST['link'];
 if (preg_match('#http://javhd.com/en/id/(.*)/(.*)#', $link, $IDJav)) {
     $content = $curl->get($IDJav[0]);
 if (preg_match('#Unlock this scene#', $content)) {
-    $html = $curl->post('https://secure.javhd.com/login/?back=javhd.com&path=&lang=en&nats=', 'login=deudam&password=123xxx&back=javhd.com&path=');
+    $html = $curl->post('https://secure.javhd.com/login/?back=javhd.com&path=&lang=en&nats=', 'login=#&password=123xxx&back=javhd.com&path=');
 }
 preg_match_all('#<a onclick="(.*)" href="(.*)"><span>(.*)</span>(.*)</a>#', $content, $download);
 
